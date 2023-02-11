@@ -1,0 +1,25 @@
+@use "../abstract/variable" as var;
+@use "../abstract/function" as fun;
+
+.navbar {
+    background-color: var.$color-nav;
+    color: white;
+    font-weight: 500;
+}
+
+.shop-card i {
+    font-size: 25px;
+    padding: 15px;
+}
+
+.d-flex>.btn {
+    background-color: var.$color-btn;
+    color: white;
+}
+
+
+
+.nav-link {
+    color: white;
+
+}

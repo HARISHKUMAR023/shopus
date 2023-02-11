@@ -1,0 +1,55 @@
+@use "../abstract/variable"as var;
+@use "../abstract/function"as func;
+@use "../abstract/mixiens"as mixc;
+
+.about-area {
+    padding: 8rem 20rem;
+    background-color: func.theme-color();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11rem;
+
+    @include mixc.responsive(xs) {
+        //css
+        padding: 4rem 2rem;
+        flex-direction: column;
+        margin-top: 0;
+
+    }
+
+
+
+    &--img {
+        width: 35rem;
+    }
+
+    &--contents {
+        color: white;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+
+            @include mixc.responsive(xs) {
+                //css
+                font-size: 2rem;
+
+            }
+
+        }
+
+        p {
+            line-height: 2;
+            color: #edd9de;
+            font-size: 1.1rem;
+
+            @include mixc.responsive(xs) {
+                //css
+                font-size: 0.8rem;
+
+            }
+
+        }
+    }
+}

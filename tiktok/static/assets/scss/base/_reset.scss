@@ -1,0 +1,34 @@
+@use "../abstract/variable" as var;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var.$font-primmary ;
+    background-color: var.$color-inside;
+
+}
+
+li {
+    list-style: none;
+}
+
+ol {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+h1 {
+    color: white;
+}

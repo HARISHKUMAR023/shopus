@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harish</title>
+    {% load static %}
+    <!--<link rel="stylesheet" href="{% static  'bootstrap/css/bootstrap.min.css' %}">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <!--<link rel="stylesheet" href="{% static  'assets/newcss/costom.css' %}">-->
+    <link rel="stylesheet" href="{% static  'assets/css/style.css' %}">
+</head>
+
+<body>
+    <!-- ========== Start  navbar ========== -->
+    <header>
+        <div class="header">
+
+            <ol class="header--links">
+                <li class="header--links__tag"><a href="#">Home</a></li>
+                <li class="header--links__tag"><a href="#">Product</a></li>
+                <li class="header--links__tag"><a href="#">Help</a></li>
+                <li class="header--links__tag"><a href="#">contact</a></li>
+                <li class="header--links__tag"><a href="admin/">admin</a></li>
+            </ol>
+
+
+
+
+            <div class="header--shop">
+                <div class="header--shop__search">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass icon"></i>
+                    <input type="text" class="form-control" placeholder="" alt="sherch">
+                </div>
+                <div class="header--shop__card "><i class="fa-sharp shop fa-solid fa-cart-shopping">
+
+                    </i>
+                    <h4>Cart</h4>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+    </header>
+    <!-- ========== End  navbar ========== -->
+    <!-- ========== Start main content ========== -->
+    <div class="main-area">
+        <div class="main-area__content">
+            <h1 style="    margin-bottom: 30px;
+            " class="animate__animated animate__flipInX">welcome to the webpage</h1>
+            <div class="main-area__btn">
+                <a href="" class="btn btn-primary b1 animate__animated animate__backInLeft">view more</a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ========== End main content ========== -->
+
+    <!-- ========== Start footer ========== -->
+    <footer class="space-y-2">
+
+        <div>
+            <h2>Harishkumar</h2>
+            <p>An initiative by <a href="#">Hari Tech Yt</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/HARISHKUMAR023" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://stackoverflow.com/users/17127552/harishkumar-n" target="_blank"><i
+                    class="fa-brands fa-stack-overflow"></i></a>
+            <a href="https://www.linkedin.com/in/harishkumar-narasimman-242881222/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCT0qh0BK9kGe2atm0ea2UZQ" target="_blank"><i
+                    class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="legel">
+            <p>&copy; 2022-All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- ========== End footer ========== -->
+
+    {% for product in products_objects %}
+    {{product.title}}<br>
+    {{product.description}}<br>
+    <!-- <img src="{{product.image}}" alt="img"> -->
+
+    {% endfor%}
+    <a href="admin/">admin</a>
+
+
+
+    <!-- ========== Start bootstrap javascript ========== -->
+    <!--<script src="{% static  'bootstrap/js/bootstrap.min.js' %}"></script>-->
+    <!-- ========== End bootstrap javascript ========== -->
+    <!-- ========== Start fontawesome icon ========== -->
+    <script src="https://kit.fontawesome.com/65210e3c63.js" crossorigin="anonymous"></script>
+
+    <!-- ========== End fontawsome icon ========== -->
+</body>
+
+</html>

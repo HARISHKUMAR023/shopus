@@ -1,0 +1,32 @@
+@use "../abstract/variable"as var;
+
+.color-cha {
+    transition: 500ms;
+    animation: color-change 10s infinite;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.line {
+
+    background: rgb(246, 7, 24);
+    background: linear-gradient(105deg, rgba(246, 7, 24, 1) 26%, rgba(205, 25, 177, 1) 100%);
+    width: 5rem;
+    height: 0.5rem;
+    border-radius: 6px;
+    margin: 30px auto;
+}
+
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/*.text-animation{
+transition: 500ms;
+animation: ani 20s infinite 2s  direction fill-mode;
+
+}*/

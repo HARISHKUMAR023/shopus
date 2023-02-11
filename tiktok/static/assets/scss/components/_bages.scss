@@ -1,0 +1,8 @@
+@use "../abstract/function" as func;
+
+.badge{
+    padding: 0px 10px;
+    &__primary{
+        background-color: func.theme-color();
+    }
+}

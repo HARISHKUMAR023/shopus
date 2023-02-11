@@ -1,0 +1,150 @@
+@use "../abstract/variable"as var;
+@use "../abstract/function"as func;
+@use "../abstract/mixiens"as mixc;
+
+
+.roadmap {
+    &:hover h2 {
+        color: func.theme-color();
+    }
+
+    padding: 8rem 20rem;
+
+    @include mixc.responsive(xs) {
+        padding: 4rem 2rem;
+
+
+    }
+
+
+    &--heading {
+        text-align: center;
+    }
+
+    &--items {
+
+        margin: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+
+        @include mixc.responsive(xs) {
+            flex-direction: column;
+
+
+        }
+
+
+    }
+
+    &--item {
+        transform: 500ms;
+        position: relative;
+        padding-left: 9rem;
+        text-align: center;
+        max-width: 350px;
+        cursor: pointer;
+        filter: grayscale(100%);
+
+        @include mixc.responsive(xs) {
+            padding-left: 1rem;
+            padding-bottom: 40px;
+
+        }
+
+        &:hover &__image::after {
+
+            animation: rotate-infinite 4000ms linear infinite;
+        }
+
+        &__image {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+
+            img {
+
+                width: 60px;
+                margin-top: 25px;
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                left: -5px;
+                border-radius: 50%;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border: 5px dotted func.theme-color();
+
+            }
+
+
+        }
+
+        &__contents {
+            margin-top: 2rem;
+
+            h5 {
+                font-size: 1.5rem;
+                font-weight: 600;
+
+            }
+
+            p {
+
+                color: #5f5757;
+                line-height: 1.5;
+            }
+        }
+
+        &:not(:last-child)::before {
+            transition: 500ms;
+            position: absolute;
+            top: 20%;
+            right: -40%;
+            content: "";
+            width: 70px;
+            height: 70px;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            font-size: 3rem;
+
+
+            z-index: 1;
+            line-height: 1;
+
+            @include mixc.responsive(xs) {
+                content: "\f107";
+                top: 80%;
+                left: 32px;
+
+
+            }
+
+        }
+
+
+
+
+
+        &:hover {
+            filter: grayscale(0);
+        }
+
+    }
+
+    &:hover :not(:last-child)::before {
+        color: func.theme-color();
+        right: -43%;
+
+    }
+
+    &:hover h3 {
+        color: func.theme-color();
+    }
+
+}

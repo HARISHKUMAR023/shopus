@@ -1,0 +1,45 @@
+@use "../abstract/mixiens"as mixc;
+
+.contact {
+    padding: 8rem 20rem;
+    background-color: rgb(209, 206, 206);
+
+    @include mixc.responsive(xs) {
+        padding: 4rem 2rem;
+
+
+    }
+
+    &-card {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 2rem 3rem;
+        border-radius: 0.5rem;
+
+        &-header {
+            flex-grow: 1;
+        }
+
+        @include mixc.responsive(xs) {
+            flex-direction: column;
+
+
+        }
+    }
+
+    img {
+        width: 550px;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        color: gray;
+    }
+
+}

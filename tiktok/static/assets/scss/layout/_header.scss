@@ -1,0 +1,73 @@
+@use "../abstract/variable" as var;
+@use "../abstract/function" as funs;
+@use "../abstract/mixiens" as mixc;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var.$color-nav;
+
+    padding: 10px;
+
+    &--links {
+        display: flex;
+        justify-content: space-between;
+
+        &__tag {
+            padding: 10px;
+        }
+    }
+
+    &--shop {
+        display: flex;
+
+
+        &__search {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        &__search i {
+            position: absolute;
+
+        }
+
+        &__search>input {
+            margin-right: 500px;
+            width: 500px;
+            height: 40px;
+
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        &__card {
+            display: flex;
+        }
+
+    }
+}
+
+.icon {
+    padding: 15px;
+    color: green;
+    min-width: 50px;
+
+    text-align: center;
+}
+
+.fa-sharp {
+    color: var.$color-btn;
+
+    padding-right: 10px;
+}
+
+.shop {
+    margin-top: 5px;
+
+}
+
+h4 {
+    color: var.$color-btn;
+}

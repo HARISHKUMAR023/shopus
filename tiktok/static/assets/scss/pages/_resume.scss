@@ -1,0 +1,156 @@
+@use "../abstract/mixiens" as mixc;
+@use "../abstract/variable" as var;
+@use "../abstract/function" as func;
+
+.resume {
+    background-color: func.theme-color();
+    height: 35rem;
+
+    @include mixc.responsive(xs) {
+        padding: 4rem 2rem;
+
+
+    }
+
+    h2 {
+
+        padding-top: 3rem;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 3rem;
+
+        @include mixc.responsive(xs) {
+            padding-top: 0.3rem;
+            font-size: 1rem;
+            padding-bottom: 0.5rem;
+
+
+        }
+    }
+
+    &-box {
+        /*.btn1 {
+            @include mixc.responsive(xs) {
+                position: relative;
+
+
+
+                top: 70px;
+                left: 40px;
+
+
+            }
+        }*/
+
+        /*  .btn2 {
+            @include mixc.responsive(xs) {
+                position: relative;
+
+                padding-top: 10px;
+                top: 130px;
+                left: 90px;
+
+
+            }
+        }*/
+
+        /*&>a {
+
+            position: relative;
+            margin: 20px;
+            top: 200px;
+            left: 700px;
+            color: red;
+            font-weight: 600;
+            border-radius: 0.2rem;
+            padding: 10px 25px;
+            background-color: rgb(243, 240, 240);
+
+            @include mixc.responsive(xs) {}
+
+            &:hover {
+                background-color: #47ff13;
+                color: white;
+                -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(254, 255, 255, 0.4);
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(254, 255, 255, 0.4);
+            }
+
+        }*/
+        &__btn {
+            display: flex;
+            position: relative;
+            border: 10px;
+            margin: 20px;
+
+            top: 200px;
+            left: 750px;
+            padding-right: 20px;
+
+            &>a {
+                margin-right: 20px;
+
+                @include mixc.responsive(xs) {
+                    margin-right: 0;
+                }
+            }
+
+            @include mixc.responsive(xs) {
+                flex-direction: column;
+                width: 160px;
+                top: 60px;
+                left: 70px;
+
+                i {
+                    padding-right: 5px;
+                }
+
+            }
+        }
+
+
+
+
+        &__img {
+            height: 120px;
+            width: 120px;
+            position: relative;
+            top: 110px;
+            left: 840px;
+
+
+
+            @include mixc.responsive(xs) {
+                top: 20px;
+                left: 90px;
+            }
+        }
+    }
+}
+
+/*.btn {
+            position: relative;
+            margin: 20px;
+            top: 200px;
+            left: 700px;
+
+            @include mixc.responsive(xs) {
+                top: 60px;
+                left: 20px;
+            }
+
+            &:hover {
+                background-color: #47ff13;
+                color: white;
+                -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(254, 255, 255, 0.4);
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(254, 255, 255, 0.4);
+            }
+        }
+
+        .btn2 {
+            @include mixc.responsive(xs) {
+                 top: 190px;
+                right: 70px;
+            }
+        }*/
