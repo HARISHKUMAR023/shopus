@@ -1,2 +1,19 @@
 @use "../abstract/function" as func;
 @use "../abstract/variable" as var;
+
+.main-card {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+.card {
+
+    background-color: rgb(204, 255, 0);
+    width: 200px;
+    height: 200px;
+    border-radius: 0.3rem;
+
+    margin: 30px;
+}

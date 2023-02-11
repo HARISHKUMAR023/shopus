@@ -40,7 +40,7 @@
                 <div class="header--shop__card "><i class="fa-sharp shop fa-solid fa-cart-shopping">
 
                     </i>
-                    <h4>Cart</h4>
+                    <h4 id="mainbtn">Cart</h4>
                 </div>
 
 
@@ -65,6 +65,27 @@
 
     </div>
     <!-- ========== End main content ========== -->
+    <!-- ========== Start card ========== -->
+    <div class="main-card">
+        {% for product in products_objects %}
+        <div class="card">
+
+            <!-- <img src="{{product.image}}" alt="img"> -->
+
+            <div class="card-img">
+                <img src="{{product.image}}" alt="img">
+            </div>
+            <div class="card-text">
+                <h3>{{product.title}}</h3>
+                <p>{{product.description}}</p>
+            </div>
+
+
+        </div>
+        {% endfor%}
+    </div>
+
+    <!-- ========== End card ========== -->
 
     <!-- ========== Start footer ========== -->
     <footer class="space-y-2">
@@ -83,19 +104,14 @@
                     class="fa-brands fa-youtube"></i></a>
         </div>
         <div class="legel">
-            <p>&copy; 2022-All rights reserved</p>
+            <p>&copy; 2023-All rights reserved</p>
         </div>
     </footer>
 
     <!-- ========== End footer ========== -->
 
-    {% for product in products_objects %}
-    {{product.title}}<br>
-    {{product.description}}<br>
-    <!-- <img src="{{product.image}}" alt="img"> -->
 
-    {% endfor%}
-    <a href="admin/">admin</a>
+
 
 
 
@@ -104,7 +120,7 @@
     <!-- ========== End bootstrap javascript ========== -->
     <!-- ========== Start fontawesome icon ========== -->
     <script src="https://kit.fontawesome.com/65210e3c63.js" crossorigin="anonymous"></script>
-
+    <script src="../static/assets/js/main.js"></script>
     <!-- ========== End fontawsome icon ========== -->
 </body>
 
